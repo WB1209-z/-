@@ -1,6 +1,6 @@
 .video-container {
     position: relative;
-    width: 100%;       /* 容器宽度可调整（如改为固定像素） */
+    width: 90vw;       /* 容器宽度可调整（如改为固定像素） */
     height: 250px;     /* 容器高度可调整（如改为 50vh） */
     overflow: hidden;  /* 隐藏视频溢出部分 */
   }
