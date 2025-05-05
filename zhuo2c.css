@@ -1,0 +1,53 @@
+.ABC {
+    background-color: #aa3737;
+    height: 250px;
+    margin-top: 50px;
+    padding-top: 100px;
+    box-sizing: border-box;
+    
+
+
+}
+.ABG {
+    width: 40px;
+    height: 50px;
+    background-color: #2e31ee;
+    margin-left: 40px;
+    
+    
+
+ }
+/* .ABC input {
+    background-color: #ce2c2c;
+    border-radius: 35%;
+    width: 30%;
+    height: 20%;
+    border: transparent;
+
+} */
+.ABE {
+    background-color: #aa3737;
+    height: 250px;
+    margin-top: 50px;
+    padding-top: 50px;
+    box-sizing: border-box;
+
+}
+.BC {
+     margin-top: 20px;
+     padding-right: 10px;
+    border: 1px solid #000;
+
+}
+.ABF {
+    width: 100px;
+    height: 100px;
+    background-color: #c4ee2c;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+ .ABF li {
+    list-style-type:none;
+ }
+ 
