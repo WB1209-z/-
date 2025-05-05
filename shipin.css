@@ -1,25 +1,21 @@
-.video-background-container {
-    position: relative; /* 确保子元素相对此容器定位 */
-    width: 100%;
-    height: 100vh; /* 按需调整高度 */
-    overflow: hidden;
+.video-container {
+    position: relative;
+    width: 100%;       /* 容器宽度可调整（如改为固定像素） */
+    height: 250px;     /* 容器高度可调整（如改为 50vh） */
+    overflow: hidden;  /* 隐藏视频溢出部分 */
   }
   
-  .video-background {
+  .video-bg {
+    width: 100%;       /* 强制宽度填充容器 */
+    height: 100%;      /* 强制高度填充容器 */
+    object-fit: cover; /* 关键属性：等比缩放并裁剪填充 */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1; /* 将视频置于底层 */
-    object-fit: cover; /* 类似 background-size: cover */
+    top: 0;
+    left: 0;
   }
   
   .content {
     position: relative; /* 确保内容在视频上方 */
-    z-index: 1; /* 内容层级高于视频 */
+    z-index: 1;
     color: white;
   }
