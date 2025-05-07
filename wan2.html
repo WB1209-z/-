@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面切换动画</title>
+    <style>
+        body {
+            margin: 0;
+            /* height: 100vh; */
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        /* 初始页面样式 */
+        .initial-page {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .trigger-button {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            margin-bottom: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .trigger-button:hover {
+            background-color: #45a049;
+        }
+
+        /* 目标页面样式 */
+        .target-page {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #f8f9fa;
+            display: none;
+            /* justify-content: center;
+            align-items: center; */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .target-page.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* 滑动动画 */
+        .slide-out {
+            transform: translateY(-100vh);
+        }
+        /* .container h1 {
+
+        } */
+        .qukuai2 {
+    margin-top: 80px;
+    margin-left: 30px;
+    height: 70px;
+    /* background-image: url(./像素1透.png);
+    background-repeat: no-repeat;
+    background-position: -60px center;
+    background-size: 50%; */
+    
+    background-color: #ce2a2a;
+    position: relative;
+    
+
+  }
+  .qukuai2 img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -70px;
+    left: -63px;
+  }
+    </style>
+</head>
+<body>
+    <!-- 初始页面 -->
+    <div class="initial-page">
+        <div class="container">
+            <h1>11</h1>
+            <button class="trigger-button" onclick="triggerAnimation()">进入</button>
+        </div>
+    </div>
+
+    <!-- 目标页面 -->
+    <div class="target-page">
+        <div class="content">
+            <div class="qukuai2">
+                <img src="./像素1透.png" alt="">
+            </div>
+            <h1>这是我的页面内容</h1>
+            <p>动画成功触发后显示的内容</p>
+        </div>
+    </div>
+
+    <script>
+        function triggerAnimation() {
+            const initialPage = document.querySelector('.initial-page');
+            const targetPage = document.querySelector('.target-page');
+
+            // 触发滑动动画
+            initialPage.classList.add('slide-out');
+
+            // 动画结束后显示目标页面
+            initialPage.addEventListener('transitionend', () => {
+                initialPage.style.display = 'none';
+                targetPage.classList.add('active');
+            });
+        }
+    </script>
+</body>
+</html>
